@@ -23,15 +23,15 @@ def test_saudacao_personalizada(nome, idioma, saudacao_esperada):
 def test_potencia(base, expoente, resultado_esperado):
     assert potencia(base, expoente) == resultado_esperado
 
-# # Teste para a função idade_valida
-# @pytest.mark.parametrize("idade, resultado_esperado", [(25, True), (0, True), (200, False)])
-# def test_idade_valida(idade, resultado_esperado):
-#     assert idade_valida(idade) == resultado_esperado
+# Teste para a função idade_valida
+@pytest.mark.parametrize("idade, resultado_esperado", [(25, True), (0, True), (200, False)])
+def test_idade_valida(idade, resultado_esperado):
+    assert idade_valida(idade) == resultado_esperado
 
-# # Teste para a função validar_email
-# @pytest.mark.parametrize("email, resultado_esperado", [("exemplo@email.com", True), ("invalido@.com", False), ("sem_arroba.com", False)])
-# def test_validar_email(email, resultado_esperado):
-#     assert validar_email(email) == resultado_esperado
+# Teste para a função validar_email
+@pytest.mark.parametrize("email, resultado_esperado", [("exemplo@email.com", True), ("invalido@.com", False), ("sem_arroba.com", False)])
+def test_validar_email(email, resultado_esperado):
+    assert validar_email(email) == resultado_esperado
 
 # # Teste para a função calcular_pagamento
 # @pytest.mark.parametrize("horas_trabalhadas, taxa_hora, resultado_esperado", [(40, 10, 400), (0, 15, 0), (45, 12.5, 562.5)])
